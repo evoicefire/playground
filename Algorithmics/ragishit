@@ -1,0 +1,15 @@
+import time
+A = list(range(1,1001))
+A.append(1000)
+
+def duplicate(A):
+    for i in range(0, len(A)):
+        for j in range(i+1, len(A)):
+            if A[i] == A[j]:
+                return True
+    return False
+
+a = time.clock()
+print(duplicate(A))
+b = time.clock()
+print((b-a)*1000000)
