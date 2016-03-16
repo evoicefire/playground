@@ -1,0 +1,16 @@
+import time
+t1 = [2, 10]; t2 = [0, 12]
+def button(t1, t2):
+	t3 = [12, 60]; r = [0, 0]
+	for i in range(0,2):
+		a = t2[i]-t1[i]
+		b = (t2[i]-t1[i])-t3[i]
+		if abs(a) < abs(b):
+			r[i] = a
+		else:
+			r[i] = b
+	return r
+tim1 = time.clock()
+print(button(t1, t2))
+tim2 = time.clock()
+print((tim2-tim1)*1000000)
